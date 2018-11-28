@@ -12,7 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+3) {
+            self.performSegue(withIdentifier: "nextPage", sender: nil)
+        }
     }
 
 
